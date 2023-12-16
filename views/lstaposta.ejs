@@ -1,0 +1,34 @@
+<%-include('cabecalho.ejs')%>
+
+<form method="post">
+    <input type="text" name="pesquisar" id="pesquisar">
+    <input type="submit" value="Pesquisar">
+</form>
+
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Formiga</th>
+        <th>Data e horário</th>
+        <th>Valor</th>
+        <th>ODD</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Aposta.forEach(function(aposta){%>
+    <tr>
+        <td><%=aposta.codigo%></td>
+        <td><%=aposta.cliente%></td>
+        <td><%=aposta.formiga%></td>
+        <td><%=aposta.dataehora%></td>
+        <td><%=aposta.valor%></td>
+        <td><%=aposta.odd%></td>
+        <td><a href="/edtaposta/<%=aposta._id%>">Editar</a></td>
+        <td><a href="/delaposta/<%=aposta._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

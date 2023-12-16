@@ -1,0 +1,28 @@
+<%-include('cabecalho.ejs')%>
+
+<form method="post">
+    <input type="text" name="pesquisar" id="pesquisar">
+    <input type="submit" value="Pesquisar">
+</form>
+
+
+<table>
+    <tr>
+        <th>Nome</th>
+        <th>Raça</th>
+        <th>Desempenho</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%Pacientes.forEach(function(paciente){%>
+    <tr>
+        <td><%=formiga.nome%></td>
+        <td><%=formiga.raca%></td>
+        <td><%=formiga.desempenho%></td>
+        <td><a href="/edtformiga/<%=formiga._id%>">Editar</a></td>
+        <td><a href="/delformiga/<%=formiga._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>

@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(117, 231, 88);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#apostasList {
+    margin-top: 20px;
+}
