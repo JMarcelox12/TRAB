@@ -6,4 +6,4 @@ const FormigaSchema = new conexao.Schema({
     desempenho: Number
 })
 
-module.exports = conexao.model('Formiga',FormigaSchema)
+module.exports = conexao.model('Formiga', FormigaSchema);

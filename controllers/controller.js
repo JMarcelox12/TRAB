@@ -7,7 +7,7 @@ function abreindex(req, res){
 }
 
 function abreaddcliente(req, res){
-    res.render('add')
+    res.render('addcliente')
 }
 
 function addcliente(req, res){
@@ -185,34 +185,46 @@ function delaposta(req, res){
     })
 }
 
-function sala1(req, res){
-    Formiga.find({}).populate('formiga').then(function(formigas,err){
-    if(err){
-        res.send(err.message)
-    }else{
-        res.render('/sala1.ejs',{Formigas:formigas})
-    }
-    })
+function sala1(req, res) {
+    console.log("Rota /sala1");
+
+    Formiga.find().populate('formiga').then(function (formigas, err) {
+        if (err) {
+            console.error(err.message);
+            res.send(err.message);
+        } else {
+            console.log("Formigas encontradas:", formigas);
+            res.render('sala1', { Formigas: formigas });
+        }
+    });
 }
 
-function sala2(req, res){
-    Formiga.find({}).populate('formiga').then(function(formigas,err){
-        if(err){
-            res.send(err.message)
-        }else{
-            res.render('/sala2.ejs',{Formigas:formigas})
+function sala2(req, res) {
+    console.log("Rota /sala2");
+
+    Formiga.find().populate('formiga').then(function (formigas, err) {
+        if (err) {
+            console.error(err.message);
+            res.send(err.message);
+        } else {
+            console.log("Formigas encontradas:", formigas);
+            res.render('sala2', { Formigas: formigas });
         }
-        })
+    });
 }
 
-function sala3(req, res){
-    Formiga.find({}).populate('formiga').then(function(formigas,err){
-        if(err){
-            res.send(err.message)
-        }else{
-            res.render('/sala3.ejs',{Formigas:formigas})
+function sala3(req, res) {
+    console.log("Rota /sala3");
+
+    Formiga.find().populate('formiga').then(function (formigas, err) {
+        if (err) {
+            console.error(err.message);
+            res.send(err.message);
+        } else {
+            console.log("Formigas encontradas:", formigas);
+            res.render('sala3', { Formigas: formigas });
         }
-        })
+    });
 }
 
 module.exports = {

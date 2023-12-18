@@ -8,8 +8,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'ejs')
 
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
 const router = require('./routes/routes')
+app.use('/', router)
 
-app.use(router)
-
-app.listen('3000')
+app.listen(3000, () => {
+    console.log('Servidon está rodando  na porta 3000')
+})
