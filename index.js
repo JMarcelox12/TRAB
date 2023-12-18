@@ -16,5 +16,5 @@ const router = require('./routes/routes')
 app.use('/', router)
 
 app.listen(3000, () => {
-    console.log('Servidon está rodando  na porta 3000')
+    console.log('Servidor está rodando  na porta 3000')
 })

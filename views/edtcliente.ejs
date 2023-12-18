@@ -1,0 +1,13 @@
+<%include('cabecalho.ejs')%>
+<form method="post" enctype="multipart/form-data">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" required placeholder="Digite seu nome."><br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required placeholder="Digite seu email"><br>
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha" required><br>
+    <label for="CPF">CPF</label>
+    <input type="text" name="cpf" id="cpf" required placeholder="Digite seu cpf."><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%include('rodape.ejs')%>

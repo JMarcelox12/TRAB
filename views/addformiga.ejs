@@ -1,10 +1,36 @@
-<%-include('cabecalho.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Apostas de corridas de formigas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <h3>Lista de Formigas</h3>
+        <li><a href='/lstformiga'>Lista de Formigas</a></li>
+</head>
+
 <label method="post" enctype="multipart/form-data">
     <label for="nome">Nome</label>
     <input type="text" name="nome" id="nome" required placeholder="Digite o nome da formiga: "><br>
-    <label for="post" enctype="raca">Raça</label>
-    <input type="text" name="raca" id="raca" required placeholder="Digite a raça da formiga: "><br>
-    <input for="desempenho">Desempenho</label>
+    <label for="raca">Raça</label>
+    <select name="raca" id="raca">
+        <option value="raca a">Raça A</option>
+        <option value="raca b">Raça B</option>
+        <option value="raca c">Raça C</option>
+    </select>
+    <label for="desempenho">Desempenho</label>
+    <select name="desempenho" id="desempenho">
+        <option value="baixo">Baixo</option>
+        <option value="medio">Médio</option>
+        <option value="alto">Alto</option>
+    </select>
+    <label for="sala">Sala</label>
+    <select name="sala" id="sala">
+        <option value="sala 01">Sala 01</option>
+        <option value="sala 02">Sala 02</option>
+        <option value="sala 03">Sala 03</option>
+    </select>
     <input type="submit" value="Adicionar">
 </form>
 <%-include('rodape.ejs')%>

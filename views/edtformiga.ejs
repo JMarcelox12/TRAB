@@ -1,0 +1,13 @@
+<%include('cabecalho.ejs')%>
+<form method="post">
+    <label for="id">ID</label>
+    <input type="text" name="id" required readonly.value="<%=Formiga._id%>"><br>
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" id="nome" required placeholder="Digite o nome: " value="<%=Formiga.nome%>"><br>
+    <label for="raca">Raça</label>
+    <input type="text" name="raca" id="raca" require placeholder="Digite a raça: " value="<%=Formiga.raca%>"><br>
+    <label for="desemepenho">Desempenho</label>
+    <input type="text" name="desempenho" id="desempenho"><br>
+    <input type="submit" value="Adicionar">
+</form>
+<%include('rodape.ejs')%>

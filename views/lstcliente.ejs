@@ -1,0 +1,30 @@
+<%-include('cabecalho.ejs')%>
+
+<form method="post">
+    <input type="text" name="pesquisar" id="pesquisar">
+    <input type="submit" value="Pesquisar">
+</form>
+
+
+<table border="1">
+    <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>CPF</th>
+        <th>Editar</th>
+        <th>Delete</th>
+    </tr>
+
+    <%clientes.forEach(function(cliente){%>
+    <tr>
+        <td><%=cliente._id%></td>
+        <td><%=cliente.nome%></td>
+        <td><%=cliente.email%></td>
+        <td><%=cliente.cpf%></td>
+        <td><a href="/edtcliente/<%=cliente._id%>">Editar</a></td>
+        <td><a href="/delcliente/<%=cliente._id%>">Delete</a></td>
+    </tr>
+    <% }) %>
+</table>
+<%-include('rodape.ejs')%>
